@@ -1,0 +1,6 @@
+[gui_scripts]
+psghelp = PySimpleGUI.PySimpleGUI:main_sdk_help
+psghome = PySimpleGUI.PySimpleGUI:_main_entry_point
+psgmain = PySimpleGUI.PySimpleGUI:_main_entry_point
+psgsettings = PySimpleGUI.PySimpleGUI:main_global_pysimplegui_settings
+psgver = PySimpleGUI.PySimpleGUI:main_get_debug_data
