@@ -1,0 +1,22 @@
+dependencias deben estar reflejadas mediante comandos dnf install py___
+
+en caso no se tenga la dependencia en el manejador de paquetes dnf
+(en este caso pysimplegui) instalarlo como a continuacion , esto se especifica 
+en el archivo .spec para generacion del rpm
+se le debe dar la estructura adecuada al proyecto de python para ejecutar
+adecuadamente el python -m build se realizan pruebas de funcionamiento en el 
+env previamente y build python -m venv env 
+
+pip install pysimplegui --target src/passgencli/_vendor
+
+python -m build
+
+rpmdev-setuptree // crea estructura para creacion de rpms
+
+cp dist/passgencli-1.0.0.tar.gz ~/rpmbuild/SOURCES/
+
+cp dist/passgencli.spec ~/rpmbuild/SPECS/
+
+rpmbuild -ba ~/rpmbuild/SPECS/passgencli.spec
+
+sudo dnf install ~/rpmbuild/RPMS/noarch/passgencli-*.rpm
