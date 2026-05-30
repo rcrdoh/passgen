@@ -28,7 +28,7 @@ python -m build
 Los siguientes pasos es para que la aplicacion sea ejecutable mediante linea de comandoss en fedora linux
 
 // previamente instalar la herramienta: sudo dnf install rpm-build rpmdevtools
-// rpmbuild --define "_topdir $(pwd)/rpmbuild" -ba rpmbuild/SPECS/your_package.spec
+// rpmbuild --define "_topdir $(pwd)/rpmbuild"
 rpmdev-setuptree // crea estructura para creacion de rpms, por defecto en directorio home (~)
 
 cp dist/passgencli-1.0.0.tar.gz ~/rpmbuild/SOURCES/
